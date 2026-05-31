@@ -6,6 +6,19 @@ Every time a new video is uploaded or the page is refreshed, all telemetry, even
 
 ---
 
+## 🌐 Live Demo
+
+| Service | URL |
+|---|---|
+| 🖥️ **Frontend Dashboard** | [https://purplle-hackathon-smart-cctv-api-an.vercel.app](https://purplle-hackathon-smart-cctv-api-an.vercel.app) |
+| ⚙️ **Backend API** | [https://purplle-smart-cctv-api.onrender.com](https://purplle-smart-cctv-api.onrender.com) |
+| 📖 **API Docs (Swagger)** | [https://purplle-smart-cctv-api.onrender.com/docs](https://purplle-smart-cctv-api.onrender.com/docs) |
+| 💚 **Health Check** | [https://purplle-smart-cctv-api.onrender.com/health](https://purplle-smart-cctv-api.onrender.com/health) |
+
+> **Note:** The backend runs on Render's free tier and may take **~50 seconds to wake up** after a period of inactivity. Wait for the WebSocket status indicator to turn **green (Synced)** before uploading a video.
+
+---
+
 ## 📽️ System Design Topology
 
 Below is the logical data flow representing how raw security video transforms into live analytics visualizations on the React dashboard:
@@ -81,7 +94,7 @@ graph TD
 │
 ├── docker-compose.yml        # Multi-container orchestrator
 ├── requirements.txt          # Python root dependencies
-└── yolov8s.pt                # Local YOLO weights (offline support)
+└── yolov8n.pt                # Local YOLO weights (nano, offline support)
 ```
 
 ---
