@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #FFF8F0;
+  --color-brand-copper: #C08552;
+  --color-brand-wood: #8C5A3C;
+  --color-brand-dark: #4B2E2B;
+}
+
+body {
+  background-color: #1a0e0c; /* Deep cocoa dark background */
+  color: #FFF8F0; /* Cream text */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 50% -20%, #4B2E2B 0%, #100605 75%);
+  min-height: 100vh;
+}
+
+/* Premium Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(75, 46, 43, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(192, 133, 82, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 133, 82, 0.7);
+}
+
+/* Glassmorphism Utilities built around custom theme palette */
+.glass-panel {
+  background: rgba(75, 46, 43, 0.35); /* Dark chocolate glass opacity */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(192, 133, 82, 0.18); /* Elegant copper border highlight */
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(75, 46, 43, 0.55);
+  border-color: rgba(192, 133, 82, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(192, 133, 82, 0.25);
+  transform: translateY(-2px);
+}
+
+.glass-hud {
+  background: rgba(43, 23, 20, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(192, 133, 82, 0.5);
+}
+
+/* Pulsing text dots */
+.pulse-emerald {
+  box-shadow: 0 0 0 0 rgba(192, 133, 82, 0.7);
+  animation: pulse-emerald 2s infinite;
+}
+
+@keyframes pulse-emerald {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(192, 133, 82, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(192, 133, 82, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(192, 133, 82, 0);
+  }
+}

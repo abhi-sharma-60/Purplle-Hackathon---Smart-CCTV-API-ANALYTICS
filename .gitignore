@@ -1,0 +1,67 @@
+# ==========================================
+# AURA AI Retail Platform Git Ignore Schema
+# ==========================================
+
+# 1. Video and Uploaded Media (Strictly Ignored)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+/backend/uploads/*
+!/backend/uploads/.gitkeep
+
+# 2. Local Database & SQLite Engine
+*.db
+*.sqlite
+*.sqlite3
+/backend/retail_analytics.db
+
+# 3. Large Machine Learning YOLO weights
+*.pt
+yolov8*.pt
+
+# 4. Python Environment & Dependency Caches
+venv/
+env/
+myenv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+
+# 5. Node.js & React Frontend builds
+node_modules/
+/frontend/node_modules/
+/frontend/dist/
+/frontend/dist-ssr/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# 6. Operating System Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 7. IDE Workspace Settings (Custom setups)
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
